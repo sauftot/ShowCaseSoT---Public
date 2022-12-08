@@ -11,14 +11,16 @@ from selenium.common.exceptions import TimeoutException, NoSuchWindowException
     Requires everything above and a valid nightbot api token in chromedriver.exe's directory.
 """
 
-# THE EMPTY STRINGS NEED TO BE FILLED OUT BY YOU, EXCEPT FOR TOKEN
+# THE EMPTY STRINGS NEED TO BE FILLED OUT BY YOU, YOU CAN GET THIS INFO FROM YOUR NIGHTBOT PANNEL, APPLICATION SETTINGS
 data = lambda: ...
 data.streaming = False
 data.setup = False
 data.client_ID = ''
 data.client_secret = ''
+# RUN THE INCLUDED SCRIPT getNightBotCommands.py AND FIND THE ID IF YOUR CUSTOM !WINS AND !LEVEL COMMAND, THEN FILL THIS
 data.winsID = ''
 data.levelID = ''
+# THIS WILL BE GENERATED DONT FILL!
 data.token = ''
 
 

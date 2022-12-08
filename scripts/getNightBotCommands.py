@@ -1,8 +1,13 @@
 import requests, json
 from time import sleep
 
+# THE EMPTY STRINGS NEED TO BE FILLED OUT BY YOU, YOU CAN GET THIS INFO FROM YOUR NIGHTBOT PANNEL, APPLICATION SETTINGS
 client_id = ''
 client_secret = ''
+
+
+
+
 def getToken():
     payload = {
                 'client_id': '{0}'.format(client_id),
