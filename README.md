@@ -1,5 +1,5 @@
 # ShowCaseSoT---Public
- NightBot API Consumer to update SoT Stats, running as OBS Script
+ NightBot API Consumer to update Sea of Thieves Season 8 PvP Stats, running as OBS Script
 
 # WTF is this?
 OBS Studio features its own Python Module to allow scripts to access its functionality directly. This plugin builds on that module.
