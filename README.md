@@ -1,8 +1,3 @@
-### WARNING
-This repository is lacking documentation and the script controls are poorly implemented, makeover inbound but not scheduled.
-
-
-
 # ShowCaseSoT---Public
  NightBot API Consumer to update Sea of Thieves Season 8 PvP Stats, running as OBS Script
 
