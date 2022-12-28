@@ -18,14 +18,13 @@ data.client_ID = ''
 data.client_secret = ''
 data.winsID = ''
 data.levelID = ''
-# 0 is Reaper, 1 is Athena PvP Faction, set as you want
-data.faction = 0
 
 # INTERNAL DATA, DO NOT FILL !!!
 data.run = False
 data.setup = False
 data.setupRunning = False
 data.token = ''
+data.faction = 0
 
   
 def worker_thread():
