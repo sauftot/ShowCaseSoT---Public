@@ -159,7 +159,7 @@ def script_properties():
     props = OBS.obs_properties_create()
     setupButton = OBS.obs_properties_add_button(props, 'Setup', 'Setup', cb_setupButton)
     OBS.obs_property_set_visible(setupButton, True)
-    toggleButton = OBS.obs_properties_add_button(props, 'Sync', 'Sync', cb_toggleButton)
+    toggleButton = OBS.obs_properties_add_button(props, 'Start', 'Start', cb_toggleButton)
     OBS.obs_property_set_visible(toggleButton, True)
     factionButton = OBS.obs_properties_add_button(props, 'Toggle Faction', 'Faction: Reaper', cb_factionButton)
     return props
@@ -183,12 +183,16 @@ def cb_setupButton(props, prop, *args, **kwargs):
         print("INFO: Setup is already running, please reload script.")
 
 def cb_toggleButton(props, prop, *args, **kwargs):
+    p = OBS.obs_properties_get(props, "Start")
     if data.run == False:
+        OBS.obs_property_set_description(p, "Stop")
         t = threading.Thread(target=worker_thread)
         data.run = True
         t.start()
-        return
+        return True
     data.run = False
+    OBS.obs_property_set_description(p, "Start")
+    return True
     
 def cb_factionButton(props, prop, *args, **kwargs):
     p = OBS.obs_properties_get(props, "Toggle Faction")
