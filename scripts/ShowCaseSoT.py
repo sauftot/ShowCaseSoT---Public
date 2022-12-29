@@ -149,7 +149,7 @@ def script_load(settings):
         
 def script_unload():
     data.run = False
-    dire = os.path.expandvars(r'%APPDATA%')
+    dire = os.path.expandvars(r'%LOCALAPPDATA%')
     if data.setup:
         os.remove(dire + '/DO_NOT_CHANGE.txt')
     revokeToken(data.token)
@@ -210,13 +210,13 @@ def cb_factionButton(props, prop, *args, **kwargs):
 #### Helper Functions ####
 
 def save_cookie(driver):
-    dire = os.path.expandvars(r'%APPDATA%')
+    dire = os.path.expandvars(r'%LOCALAPPDATA%')
     with open(dire + '/DO_NOT_CHANGE.txt', 'wb') as filehandler:
         pickle.dump(driver.get_cookies(), filehandler)
     filehandler.close()
 
 def load_cookie(driver):
-    dire = os.path.expandvars(r'%APPDATA%')
+    dire = os.path.expandvars(r'%LOCALAPPDATA%')
     with open(dire + '/DO_NOT_CHANGE.txt', 'rb') as cookiesfile:
         cookies = pickle.load(cookiesfile)
         for cookie in cookies:
