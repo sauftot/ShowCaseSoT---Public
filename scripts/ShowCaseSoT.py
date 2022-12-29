@@ -199,10 +199,11 @@ def cb_factionButton(props, prop, *args, **kwargs):
     if data.faction == 0:
         OBS.obs_property_set_description(p, "Faction: Athena")
         data.faction = 1
+        print("INFO: Faction set to Athena")
     else:
         OBS.obs_property_set_description(p, "Faction: Reaper")
         data.faction = 0
-    print("INFO: Faction = " + str(data.faction))
+        print("INFO: Faction set to Reaper")
     return True
 
 
